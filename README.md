@@ -37,12 +37,12 @@ This project was created as part of my Senior Project (CSE 499) for Brigham Youn
   npm install
   node server.js
 
-3. Install Frontend Depencies & Start App.
+3. **Install Frontend Depencies & Start App**
   cd frontend
   npm install
   npm start
 
-4. Open your browser to http://locahost:3000.
+4. **Open your browser to http://locahost:3000**
 
-Note: The backend runs on port 4000, the frontend runs on port 3000.
-Note: You must have both Node.js and npm installed for the tool to work.
+**Note:** The backend runs on port 4000, the frontend runs on port 3000.
+**Note:** You must have both Node.js and npm installed for the tool to work.
