@@ -1,0 +1,55 @@
+Accessibility Report for https://www.msn.com/en-us/weather/forecast/in-Idaho-Falls,ID?loc=eyJsIjoiSWRhaG8gRmFsbHMiLCJyIjoiSWRhaG8iLCJjIjoiVW5pdGVkIFN0YXRlcyIsImkiOiJVUyIsImciOiJlbi11cyIsIngiOiItMTExLjk4ODg0NTgyNTE5NTMxIiwieSI6IjQzLjQ4OTY5NjUwMjY4NTU1In0%3D&weadegreetype=F&ocid=msedgntp&cvid=ae34e179bb8b4f05bc863e7fed932002&content=TeaserRainTomorrow_wxnwtsrtm
+
+1. ARIA hidden element must not be focusable or contain focusable elements (aria-hidden-focus)
+  Description: Ensure aria-hidden elements are not focusable nor contain focusable elements
+  Impact: serious
+  Tags: cat.name-role-value, wcag2a, wcag412, TTv5, TT6.a, EN-301-549, EN-9.4.1.2
+  Fix: https://dequeuniversity.com/rules/axe/4.10/aria-hidden-focus?application=axeAPI
+
+2. Elements must only use permitted ARIA attributes (aria-prohibited-attr)
+  Description: Ensure ARIA attributes are not prohibited for an element's role
+  Impact: serious
+  Tags: cat.aria, wcag2a, wcag412, EN-301-549, EN-9.4.1.2
+  Fix: https://dequeuniversity.com/rules/axe/4.10/aria-prohibited-attr?application=axeAPI
+
+3. ARIA attributes must conform to valid values (aria-valid-attr-value)
+  Description: Ensure all ARIA attributes have valid values
+  Impact: critical
+  Tags: cat.aria, wcag2a, wcag412, EN-301-549, EN-9.4.1.2
+  Fix: https://dequeuniversity.com/rules/axe/4.10/aria-valid-attr-value?application=axeAPI
+
+4. Buttons must have discernible text (button-name)
+  Description: Ensure buttons have discernible text
+  Impact: critical
+  Tags: cat.name-role-value, wcag2a, wcag412, section508, section508.22.a, TTv5, TT6.a, EN-301-549, EN-9.4.1.2, ACT
+  Fix: https://dequeuniversity.com/rules/axe/4.10/button-name?application=axeAPI
+
+5. Elements must meet minimum color contrast ratio thresholds (color-contrast)
+  Description: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+  Impact: serious
+  Tags: cat.color, wcag2aa, wcag143, TTv5, TT13.c, EN-301-549, EN-9.1.4.3, ACT
+  Fix: https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI
+
+6. Document should have one main landmark (landmark-one-main)
+  Description: Ensure the document has a main landmark
+  Impact: moderate
+  Tags: cat.semantics, best-practice
+  Fix: https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI
+
+7. Interactive controls must not be nested (nested-interactive)
+  Description: Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies
+  Impact: serious
+  Tags: cat.keyboard, wcag2a, wcag412, TTv5, TT6.a, EN-301-549, EN-9.4.1.2
+  Fix: https://dequeuniversity.com/rules/axe/4.10/nested-interactive?application=axeAPI
+
+8. Page should contain a level-one heading (page-has-heading-one)
+  Description: Ensure that the page, or at least one of its frames contains a level-one heading
+  Impact: moderate
+  Tags: cat.semantics, best-practice
+  Fix: https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI
+
+9. All page content should be contained by landmarks (region)
+  Description: Ensure all page content is contained by landmarks
+  Impact: moderate
+  Tags: cat.keyboard, best-practice
+  Fix: https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI
