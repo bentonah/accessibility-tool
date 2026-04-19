@@ -1,21 +1,21 @@
 # Accessibility Analyzer
 
-A lightweight, web-based tool designed to help developers identify and fix accessibility issues on any public website.
-Built using React, Node.js, and Puppeteer, this app scans webpages for common accessibility problems like missing alt text, poor color contrast, heading structure issues, and more.
+A full-stack web application that helps developers identify and fix accessibility issues on any public website.
 
-This project was created as part of my Senior Project (CSE 499) for Brigham Young University - Idaho, Winter Semester 2025.
+It performs automated audits using real browser rendering and highlights common issues such as missing alt text, poor contrast, and improper heading structure—making it easier to catch problems before deployment.
 
 
 ## Features
 
-- User authentication (Login/Register)
-- URL-based accessibility scanning (via Axe and Puppeteer)
-- Clean, minimal UI with light/dark mode toggle
-- Expandable and color-coded accessibility reports
-- Scan history with download options
-- PDF and TXT export (with user footer info)
-- Persistent session & error handling
-- Auto-prefixes URL with `https://` if missing
+- User authentication (JWT-based login/register)
+- Accessibility scanning using axe-core + Puppeteer
+- Real-time analysis of any public URL
+- Expandable, color-coded issue reports
+- Scan history with download support
+- Export reports as PDF or TXT (with user metadata)
+- Light/dark mode UI
+- Automatic URL normalization (https:// handling)
+- Persistent sessions and error handling
 
 
 ## Tech Stack
@@ -24,6 +24,14 @@ This project was created as part of my Senior Project (CSE 499) for Brigham Youn
 - **Backend**: Node.js, Express, Puppeteer, axe-core
 - **Authentication**: JSON Web Tokens (JWT)
 - **PDF Generation**: jsPDF
+
+
+## How It Works
+1. User submits a URL
+2. Backend launches a headless browser using Puppeteer
+3. axe-core runs accessibility checks on the rendered page
+4. Results are processed and categorized
+5. Data is returned and displayed in a structured UI
 
 
 ## Setup Instructions
@@ -42,8 +50,23 @@ This project was created as part of my Senior Project (CSE 499) for Brigham Youn
   npm install
   npm start
 
-4. **Open your browser to http://locahost:3000**
+4. **Open your browser to http://localhost:3000**
 
 **Note:** The backend runs on port 4000, the frontend runs on port 3000.
 
 **Note:** You must have both Node.js and npm installed for the tool to work.
+
+
+## Key Design Decisions
+
+- Puppeteer + axe-core chosen to analyze fully rendered pages instead of static HTML
+- JWT authentication used for lightweight session management
+- PDF export added to make reports shareable in professional workflows
+
+
+## Future Improvements
+
+- Deploy as a hosted SaaS tool
+- Add CI/CD integration (scan sites automatically)
+- Improve performance for large pages
+- Add team-based reporting
